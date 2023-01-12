@@ -31,22 +31,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Deployment and Configuration Steps</h2>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
 Step 1: Firstly, create two virtual machines. The first virtual machine will be the domain controller. Its name will be DC-1, and its image type will be Windows Server 2022. The Virtual Network (Vnet) that is now established should be noted since it will be required for our second virtual machine.
 </p>
 
 <p>
-<img src="https://i.imgur.com/n75PPjD.png" height="80%" width="80%" alt="Virtual Machine DC-1"/>
+<img src="https://i.imgur.com/n75PPjD.png" height="40%" width="40%" alt="Virtual Machine DC-1"/>
 </p>
 
 Furthermore, make sure that DC-1's virtual Network Interface Card (NIC) Private IP address is set to static. To achieve this, navigate to the network settings of the DC-1, select networking, and then click the link next to network interface.
 <br />
 
 <p>
-<img src="https://i.imgur.com/8idIkfJ.png" height="80%" width="80%" alt="NIC IP"/>
+<img src="https://i.imgur.com/8idIkfJ.png" height="40%" width="40%" alt="NIC IP"/>
 </p>
 
 Next, choose ipconfig1 from the IP Configurations menu. To ensure that DC-1's IP address won't change, simply select Assignment from Dynamic to Static. 
@@ -54,11 +50,11 @@ Next, choose ipconfig1 from the IP Configurations menu. To ensure that DC-1's IP
 <br />
 
 <p>
-<img src="https://i.imgur.com/sRLW3o7.png" height="80%" width="80%" alt="ip config"/>
+<img src="https://i.imgur.com/sRLW3o7.png" height="40%" width="40%" alt="ip config"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/sswneoz.png" height="80%" width="80%" alt="Static"/>
+<img src="https://i.imgur.com/sswneoz.png" height="40%" width="40%" alt="Static"/>
 </p>
 <br />
 
@@ -68,11 +64,11 @@ The 2nd virtual machine will represent the Client, labeled Client-1, and Windows
 <br />
 
 <p>
-<img src="https://i.imgur.com/UWHi1Xn.pngg" height="80%" width="80%" alt="Client 1"/>
+<img src="https://i.imgur.com/UWHi1Xn.pngg" height="40%" width="40%" alt="Client 1"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/GU4ySko.png" height="80%" width="80%" alt="Vnet"/>
+<img src="https://i.imgur.com/GU4ySko.png" height="40%" width="40%" alt="Vnet"/>
 </p>
 <br />
 
@@ -81,7 +77,7 @@ Step 2: Access Client-1 by logging in with Microsoft Remote Desktop. You then wa
 </p>
 
 <p>
-<img src="https://i.imgur.com/qTZZ0S7.png" height="80%" width="80%" alt="timeout"/>
+<img src="https://i.imgur.com/qTZZ0S7.png" height="40%" width="40%" alt="timeout"/>
 </p>
 
 <p>
@@ -90,11 +86,11 @@ The request is timing out due to the firewall. On DC-1's local Windows firewall,
 <br />
 
 <p>
-<img src="https://i.imgur.com/1dPUDFU.png" height="80%" width="80%" alt="Windows Defender Firewall"/>
+<img src="https://i.imgur.com/1dPUDFU.png" height="40%" width="40%" alt="Windows Defender Firewall"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/3cjb7w8.png" height="80%" width="80%" alt="Enabling ICMPv4"/>
+<img src="https://i.imgur.com/3cjb7w8.png" height="40%" width="40%" alt="Enabling ICMPv4"/>
 </p>
 <br />
 <p>
@@ -102,7 +98,7 @@ Finally, log back into Client-1, and the command line will begin to successfully
 </p>
 
 <p>
-<img src="https://i.imgur.com/btWubBB.png" height="80%" width="80%" alt="Replies from ICMPv4"/>
+<img src="https://i.imgur.com/btWubBB.png" height="40%" width="40%" alt="Replies from ICMPv4"/>
 </p>
 <br />
 
@@ -111,11 +107,11 @@ Step 3: Return to DC-1 and select "Add roles and features" in Server Manager aft
 </p>
 
 <p>
-<img src="https://i.imgur.com/htCmnhr.png" height="80%" width="80%" alt="Installing AD"/>
+<img src="https://i.imgur.com/htCmnhr.png" height="40%" width="40%" alt="Installing AD"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/ZidjxWG.png" height="80%" width="80%" alt="Active Directory Domain Services"/>
+<img src="https://i.imgur.com/ZidjxWG.png" height="40%" width="40%" alt="Active Directory Domain Services"/>
 </p>
 
 <p>
@@ -123,7 +119,7 @@ Afterwards, click on the flag in the top right corner of the Server Manager Dash
 </p>
 
 <p>
-<img src="https://i.imgur.com/Pj3CXAs.png" height="80%" width="80%" alt="Promote Server"/>
+<img src="https://i.imgur.com/Pj3CXAs.png" height="40%" width="40%" alt="Promote Server"/>
 </p>
 
 <p>
@@ -131,11 +127,11 @@ Additionally, choose "Add a new forest" - "Root domain name: mydomain.com", then
 </p>
 
 <p>
-<img src="https://i.imgur.com/7VCyPN4.png" height="80%" width="80%" alt="Adding a new forest"/>
+<img src="https://i.imgur.com/7VCyPN4.png" height="40%" width="40%" alt="Adding a new forest"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/DvwjxdK.png" height="80%" width="80%" alt="mydomain labuser"/>
+<img src="https://i.imgur.com/DvwjxdK.png" height="40%" width="40%" alt="mydomain labuser"/>
 </p>
 <br />
 
@@ -144,11 +140,11 @@ Step 4: Open Server Manager on DC-1, choose tools in the upper right corner, and
 </p>
   
 <p>
-<img src="https://i.imgur.com/xVJWHLt.png" height="80%" width="80%" alt="ADUC"/>
+<img src="https://i.imgur.com/xVJWHLt.png" height="40%" width="40%" alt="ADUC"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/p0BZRX8.png" height="80%" width="80%" alt="New OU"/>
+<img src="https://i.imgur.com/p0BZRX8.png" height="40%" width="40%" alt="New OU"/>
 </p>
 
 <p>
@@ -156,11 +152,11 @@ Assign one the name _EMPLOYEES and the other _ADMINS. The new organizational uni
 </p>
 
 <p>
-<img src="https://i.imgur.com/GzCzqPN.png" height="80%" width="80%" alt="New User"/>
+<img src="https://i.imgur.com/GzCzqPN.png" height="40%" width="40%" alt="New User"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/9yJNdiT.png" height="80%" width="80%" alt="Admin User"/>
+<img src="https://i.imgur.com/9yJNdiT.png" height="40%" width="40%" alt="Admin User"/>
 </p>
   
 <p>
@@ -168,15 +164,15 @@ Furthermore, go to _ADMINS organizational unit and right click Jane doe then sel
 </p>
 
 <p>
-<img src="https://i.imgur.com/5nXQSeo.png" height="80%" width="80%" alt="User Properties"/>
+<img src="https://i.imgur.com/5nXQSeo.png" height="40%" width="40%" alt="User Properties"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/3OIM1ek.png" height="80%" width="80%" alt="Domain Admin"/>
+<img src="https://i.imgur.com/3OIM1ek.png" height="40%" width="40%" alt="Domain Admin"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/rWxqqAx.png" height="80%" width="80%" alt="mydomainuser"/>
+<img src="https://i.imgur.com/rWxqqAx.png" height="40%" width="40%" alt="mydomainuser"/>
 </p>
 <br />
 
@@ -185,15 +181,15 @@ Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Netw
 </p>
 
 <p>
-<img src="https://i.imgur.com/MdHiiaS.png" height="80%" width="80%" alt="Client-1 DNS"/>
+<img src="https://i.imgur.com/MdHiiaS.png" height="40%" width="40%" alt="Client-1 DNS"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/MpUR4zK.png" height="80%" width="80%" alt="Client-1 using DC-1 Private IP Address"/>
+<img src="https://i.imgur.com/MpUR4zK.png" height="40%" width="40%" alt="Client-1 using DC-1 Private IP Address"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/4TJFGYJ.png" height="80%" width="80%" alt="Restart Client-1"/>
+<img src="https://i.imgur.com/4TJFGYJ.png" height="40%" width="40%" alt="Restart Client-1"/>
 </p>
 
 <p>
@@ -201,11 +197,11 @@ Re-login to Client-1 using Microsoft Remote Desktop as the original local admin 
 </p>
 
 <p>
-<img src="https://i.imgur.com/sSBuXQa.png" height="80%" width="80%" alt="Rename this PC"/>
+<img src="https://i.imgur.com/sSBuXQa.png" height="40%" width="40%" alt="Rename this PC"/>
 </p>
 
 <p>
-<img src="https://i.imgur.com/Bt1gq03.png" height="80%" width="80%" alt="Domain changes"/>
+<img src="https://i.imgur.com/Bt1gq03.png" height="40%" width="40%" alt="Domain changes"/>
 </p>
 <br />
 
@@ -214,7 +210,7 @@ Step 6: Use mydomain.com\jane_ admin to log back into Client-1, and then use the
 </p>
 
 <p>
-<img src="https://i.imgur.com/nEqlc4V.png" height="80%" width="80%" alt="Remote Desktop"/>
+<img src="https://i.imgur.com/nEqlc4V.png" height="40%" width="40%" alt="Remote Desktop"/>
 </p>
 
 <p>
