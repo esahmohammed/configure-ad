@@ -49,13 +49,33 @@ Furthermore, make sure that DC-1's virtual Network Interface Card (NIC) Private 
 <img src="https://i.imgur.com/8idIkfJ.png" height="80%" width="80%" alt="NIC IP"/>
 </p>
 
-Next, choose ipconfig1 from the IP Configurations menu. To ensure that DC-1's IP address won't change, simply select Assignment from Dynamic to Static. The 2nd virtual machine will represent the Client, labeled Client-1, and Windows 10 Pro will be the image type. Use the same Vnet and resource group as DC-1.
+Next, choose ipconfig1 from the IP Configurations menu. To ensure that DC-1's IP address won't change, simply select Assignment from Dynamic to Static. 
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/sRLW3o7.png" height="80%" width="80%" alt="ip config"/>
 </p>
+
+<p>
+<img src="https://i.imgur.com/sswneoz.png" height="80%" width="80%" alt="Static"/>
+</p>
+<br />
+
+<p>
+The 2nd virtual machine will represent the Client, labeled Client-1, and Windows 10 Pro will be the image type. Use the same Vnet and resource group as DC-1.
+</p>
+<br />
+
+<p>
+<img src="https://i.imgur.com/UWHi1Xn.pngg" height="80%" width="80%" alt="Client 1"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/GU4ySko.png" height="80%" width="80%" alt="Vnet"/>
+</p>
+<br />
+
 <p>
 Step 2: Access Client-1 by logging in with Microsoft Remote Desktop. You then want look for a command line, open it, and ping DC-1's private IP Address (in our instance, 10.0.0.4). Select ping - t 10.0.0.4. The request is timing out due to the firewall. On DC-1's local Windows firewall, we must activate ICMPv4 to fix issue. Utilizing Microsoft Remote Desktop, log in to DC-1, begin by selecting Start and Windows Administrative Tool, and then select Windows Defender Firewall with Advanced Security -Inbound rules. Additionally, enable the two inbound rules for Core Networking Diagnostics ICMPv4 by locating it in the list of protocols. Finally, log back into Client-1, and the command line will begin to successfully ping DC-1.
 </p>
