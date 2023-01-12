@@ -77,13 +77,27 @@ The 2nd virtual machine will represent the Client, labeled Client-1, and Windows
 <br />
 
 <p>
-Step 2: Access Client-1 by logging in with Microsoft Remote Desktop. You then want look for a command line, open it, and ping DC-1's private IP Address (in our instance, 10.0.0.4). Select ping - t 10.0.0.4. The request is timing out due to the firewall. On DC-1's local Windows firewall, we must activate ICMPv4 to fix issue. Utilizing Microsoft Remote Desktop, log in to DC-1, begin by selecting Start and Windows Administrative Tool, and then select Windows Defender Firewall with Advanced Security -Inbound rules. Additionally, enable the two inbound rules for Core Networking Diagnostics ICMPv4 by locating it in the list of protocols. Finally, log back into Client-1, and the command line will begin to successfully ping DC-1.
+Step 2: Access Client-1 by logging in with Microsoft Remote Desktop. You then want look for a command line, open it, and ping DC-1's private IP Address (in our instance, 10.0.0.4). Select ping - t 10.0.0.4. 
+</p>
+
+<p>
+<img src="https://i.imgur.com/qTZZ0S7.png" height="80%" width="80%" alt="timeout"/>
+</p>
+
+<p>
+The request is timing out due to the firewall. On DC-1's local Windows firewall, we must activate ICMPv4 to fix issue. Utilizing Microsoft Remote Desktop, log in to DC-1, begin by selecting Start and Windows Administrative Tool, and then select Windows Defender Firewall with Advanced Security -Inbound rules. Additionally, enable the two inbound rules for Core Networking Diagnostics ICMPv4 by locating it in the list of protocols. Finally, log back into Client-1, and the command line will begin to successfully ping DC-1.
 </p>
 <br />
 
 <p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+<img src="https://i.imgur.com/1dPUDFU.png" height="80%" width="80%" alt="Windows Defender Firewall"/>
 </p>
+
+<p>
+<img src="https://i.imgur.com/3cjb7w8.png" height="80%" width="80%" alt="Enabling ICMPv4"/>
+</p>
+<br />
+
 <p>
 Step 3: Return to DC-1 and select "Add roles and features" in Server Manager after logging back in. Follow the guidelines. Select "Active Directory Domain Services at Server Roles.  Then click on Add Features next. Finish installation by selecting next. Afterwards, click on the flag in the top right corner of the Server Manager Dashboard. Then select, “Promote this server to a domain controller”. Additionally, choose "Add a new forest" - "Root domain name: mydomain.com", then choose "Next" to Create password, and lastly, select "Next" and adhere to the instructions, then click Install to complete the process. Ultimately, DC-1 will restart itself; as a result, log back in as user: mydomain.com\labuser..
 </p>
