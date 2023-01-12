@@ -96,6 +96,10 @@ The request is timing out due to the firewall. On DC-1's local Windows firewall,
 <p>
 <img src="https://i.imgur.com/3cjb7w8.png" height="80%" width="80%" alt="Enabling ICMPv4"/>
 </p>
+
+<p>
+<img src="https://i.imgur.com/btWubBB.png" height="80%" width="80%" alt="Replies from ICMPv4"/>
+</p>
 <br />
 
 <p>
