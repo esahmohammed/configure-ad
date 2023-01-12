@@ -107,17 +107,93 @@ Finally, log back into Client-1, and the command line will begin to successfully
 <br />
 
 <p>
-Step 3: Return to DC-1 and select "Add roles and features" in Server Manager after logging back in. Follow the guidelines. Select "Active Directory Domain Services at Server Roles.  Then click on Add Features next. Finish installation by selecting next. Afterwards, click on the flag in the top right corner of the Server Manager Dashboard. Then select, “Promote this server to a domain controller”. Additionally, choose "Add a new forest" - "Root domain name: mydomain.com", then choose "Next" to Create password, and lastly, select "Next" and adhere to the instructions, then click Install to complete the process. Ultimately, DC-1 will restart itself; as a result, log back in as user: mydomain.com\labuser..
+Step 3: Return to DC-1 and select "Add roles and features" in Server Manager after logging back in. Follow the guidelines. Select "Active Directory Domain Services at Server Roles.  Then click on Add Features next. Finish installation by selecting next.
+</p>
+
+<p>
+<img src="https://i.imgur.com/htCmnhr.png" height="80%" width="80%" alt="Installing AD"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/ZidjxWG.png" height="80%" width="80%" alt="Active Directory Domain Services"/>
+</p>
+
+<p>
+Afterwards, click on the flag in the top right corner of the Server Manager Dashboard. Then select, “Promote this server to a domain controller”. 
+</p>
+
+<p>
+<img src="https://i.imgur.com/Pj3CXAs.png" height="80%" width="80%" alt="Promote Server"/>
+</p>
+
+<p>
+Additionally, choose "Add a new forest" - "Root domain name: mydomain.com", then choose "Next" to Create password, and lastly, select "Next" and adhere to the instructions, then click Install to complete the process. Ultimately, DC-1 will restart itself; as a result, log back in as user: mydomain.com\labuser..
+</p>
+
+<p>
+<img src="https://i.imgur.com/7VCyPN4.png" height="80%" width="80%" alt="Adding a new forest"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/DvwjxdK.png" height="80%" width="80%" alt="mydomain labuser"/>
 </p>
 <br />
 
 <p>
-Step 4: Open Server Manager on DC-1, choose tools in the upper right corner, and then choose Active Directory Users and Computers. Right-click MyDomain.com, choose "New," and then "Organizational Unit" (We will be creating 2 folders.) Assign one the name _EMPLOYEES and the other _ADMINS. The new organizational units will be sorted to the top if you right-click mydomain.com and choose refresh. Go to the _ADMINS organizational unit and use the right-click menu to pick New, then User. Once that is done, you must enter the following data: First/Last name: jane doe and user login name: jane_ admin. After that, choose next, enter a password, then uncheck every box, click next, and finally select finish. Furthermore, go to _ADMINS organizational unit and right click Jane doe then select properties. Click the "member of" tab and select Add then type in domain admins then select Check Names and select OK and then Apply. Log out of DC-1 as "labuser" and log back in as “mydomain.com\jane_admin”
+Step 4: Open Server Manager on DC-1, choose tools in the upper right corner, and then choose Active Directory Users and Computers. Right-click MyDomain.com, choose "New," and then "Organizational Unit" (We will be creating 2 folders.)
+</p>
+  
+<p>
+<img src="https://i.imgur.com/xVJWHLt.png" height="80%" width="80%" alt="ADUC"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/p0BZRX8.png" height="80%" width="80%" alt="New OU"/>
+</p>
+
+<p>
+Assign one the name _EMPLOYEES and the other _ADMINS. The new organizational units will be sorted to the top if you right-click mydomain.com and choose refresh. Go to the _ADMINS organizational unit and use the right-click menu to pick New, then User. Once that is done, you must enter the following data: First/Last name: jane doe and user login name: jane_ admin. After that, choose next, enter a password, then uncheck every box, click next, and finally select finish. 
+</p>
+
+<p>
+<img src="https://i.imgur.com/GzCzqPN.png" height="80%" width="80%" alt="New User"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/9yJNdiT.png" height="80%" width="80%" alt="Admin User"/>
+</p>
+  
+<p>
+Furthermore, go to _ADMINS organizational unit and right click Jane doe then select properties. Click the "member of" tab and select Add then type in domain admins then select Check Names and select OK and then Apply. Log out of DC-1 as "labuser" and log back in as “mydomain.com\jane_admin”
+</p>
+
+<p>
+<img src="https://i.imgur.com/5nXQSeo.png" height="80%" width="80%" alt="User Properties"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/3OIM1ek.png" height="80%" width="80%" alt="Domain Admin"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/rWxqqAx.png" height="80%" width="80%" alt="mydomainuser"/>
 </p>
 <br />
 
 <p>
-Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Networking from the menu on the left, click the link next to the NIC, choose DNS server, then click Custom. Type in the private IP address of DC-1 and click Save. Once the update is complete, choose restart and then click yes. Re-login to Client-1 using Microsoft Remote Desktop as the original local admin (labuser), and then choose System from righting clicking on the start menu. Choose “Rename this PC” (advanced) from the menu on the right, then click “Change”. Next, choose “Under Member of”. Finally, type “mydomain.com” into the domain field and click OK. The username is mydomain.com\jane_ admin. Select OK after entering the password. At last, restart the virtual machine.
+Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Networking from the menu on the left, click the link next to the NIC, choose DNS server, then click Custom. Type in the private IP address of DC-1 and click Save.
+</p>
+
+<p>
+<img src="https://i.imgur.com/MdHiiaS.png" height="80%" width="80%" alt="Client-1 DNS"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/MpUR4zK.png" height="80%" width="80%" alt="Client-1 using DC-1 Private IP Address"/>
+</p>
+
+<p>
+Once the update is complete, choose restart and then click yes. Re-login to Client-1 using Microsoft Remote Desktop as the original local admin (labuser), and then choose System from righting clicking on the start menu. Choose “Rename this PC” (advanced) from the menu on the right, then click “Change”. Next, choose “Under Member of”. Finally, type “mydomain.com” into the domain field and click OK. The username is mydomain.com\jane_ admin. Select OK after entering the password. At last, restart the virtual machine.
 </p>
 <br />
 
