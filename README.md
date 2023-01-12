@@ -193,7 +193,7 @@ Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Netw
 </p>
 
 <p>
-<img src="https://i.imgur.com/4TJFGYJ.png" height="40%" width="40%" alt="Restart Client-1"/>
+<img src="https://i.imgur.com/4TJFGYJ.png" height="20%" width="20%" alt="Restart Client-1"/>
 </p>
 
 <p>
