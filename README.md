@@ -43,6 +43,7 @@ Step 1: Firstly, create two virtual machines. The first virtual machine will be 
 </p>
 
 Furthermore, make sure that DC-1's virtual Network Interface Card (NIC) Private IP address is set to static. To achieve this, navigate to the network settings of the DC-1, select networking, and then click the link next to network interface.
+<br />
 
 <p>
 <img src="https://i.imgur.com/8idIkfJ.png" height="80%" width="80%" alt="NIC IP"/>
