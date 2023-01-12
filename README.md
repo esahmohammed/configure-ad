@@ -181,7 +181,7 @@ Furthermore, go to _ADMINS organizational unit and right click Jane doe then sel
 <br />
 
 <p>
-Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Networking from the menu on the left, click the link next to the NIC, choose DNS server, then click Custom. Type in the private IP address of DC-1 and click Save.
+Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Networking from the menu on the left, click the link next to the NIC, choose DNS server, then click Custom. Type in the private IP address of DC-1 and click Save. Once the update is complete, choose restart and then click yes.
 </p>
 
 <p>
@@ -193,12 +193,36 @@ Step 5: Go back to Client-1 Virtual Machine via the Azure interface. Select Netw
 </p>
 
 <p>
-Once the update is complete, choose restart and then click yes. Re-login to Client-1 using Microsoft Remote Desktop as the original local admin (labuser), and then choose System from righting clicking on the start menu. Choose “Rename this PC” (advanced) from the menu on the right, then click “Change”. Next, choose “Under Member of”. Finally, type “mydomain.com” into the domain field and click OK. The username is mydomain.com\jane_ admin. Select OK after entering the password. At last, restart the virtual machine.
+<img src="https://i.imgur.com/4TJFGYJ.png" height="80%" width="80%" alt="Restart Client-1"/>
+</p>
+
+<p>
+Re-login to Client-1 using Microsoft Remote Desktop as the original local admin (labuser), and then choose System from right clicking on the start menu. Choose “Rename this PC” (advanced), then click “Change”. Next, choose “Under Member of”. Finally, type “mydomain.com” into the domain field and click OK. The username is mydomain.com\jane_ admin. Select OK after entering the password. At last, restart the virtual machine.
+</p>
+
+<p>
+<img src="https://i.imgur.com/sSBuXQa.png" height="80%" width="80%" alt="Rename this PC"/>
+</p>
+
+<p>
+<img src="https://i.imgur.com/Bt1gq03.png" height="80%" width="80%" alt="Domain changes"/>
 </p>
 <br />
 
 <p>
-Step 6: Use mydomain.com\jane_ admin to log back into Client-1, and then use the right-click menu to choose System from the Start menu. Select "Remote Desktop" on the right side, click "User Accounts", choose "Select users who can remotely access this PC", select Add. Type: Domain Users, and click check Names, and then click OK. Select "OK" again. 
+Step 6: Use mydomain.com\jane_ admin to log back into Client-1, and then use the right-click menu to choose System from the Start menu. Select "Remote Desktop"
+</p>
+
+<p>
+<img src="https://i.imgur.com/nEqlc4V.png" height="80%" width="80%" alt="Remote Desktop"/>
+</p>
+
+<p>
+Click "User Accounts", choose "Select users who can remotely access this PC", select Add. Type: Domain Users, and click check Names, and then click OK. Select "OK" again. 
+</p>
+
+<p>
+<img src="https://i.imgur.com/xsO0nTa.png" height="80%" width="80%" alt="Domain Users"/>
 </p>
 <br />
 
