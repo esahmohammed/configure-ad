@@ -85,7 +85,7 @@ Step 2: Access Client-1 by logging in with Microsoft Remote Desktop. You then wa
 </p>
 
 <p>
-The request is timing out due to the firewall. On DC-1's local Windows firewall, we must activate ICMPv4 to fix issue. Utilizing Microsoft Remote Desktop, log in to DC-1, begin by selecting Start and Windows Administrative Tool, and then select Windows Defender Firewall with Advanced Security -Inbound rules. Additionally, enable the two inbound rules for Core Networking Diagnostics ICMPv4 by locating it in the list of protocols. Finally, log back into Client-1, and the command line will begin to successfully ping DC-1.
+The request is timing out due to the firewall. On DC-1's local Windows firewall, we must activate ICMPv4 to fix issue. Utilizing Microsoft Remote Desktop, log in to DC-1, begin by selecting Start and Windows Administrative Tool, and then select Windows Defender Firewall with Advanced Security -Inbound rules. Additionally, enable the two inbound rules for Core Networking Diagnostics ICMPv4 by locating it in the list of protocols.
 </p>
 <br />
 
@@ -95,6 +95,10 @@ The request is timing out due to the firewall. On DC-1's local Windows firewall,
 
 <p>
 <img src="https://i.imgur.com/3cjb7w8.png" height="80%" width="80%" alt="Enabling ICMPv4"/>
+</p>
+<br />
+<p>
+Finally, log back into Client-1, and the command line will begin to successfully ping DC-1.
 </p>
 
 <p>
