@@ -35,12 +35,19 @@ This tutorial outlines the implementation of on-premises Active Directory within
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 </p>
 <p>
-Step 1: Firstly, create two virtual machines. The first virtual machine will be the domain controller. Its name will be DC-1, and its image type will be Windows Server 2022.
+Step 1: Firstly, create two virtual machines. The first virtual machine will be the domain controller. Its name will be DC-1, and its image type will be Windows Server 2022. The Virtual Network (Vnet) that is now established should be noted since it will be required for our second virtual machine.
 </p>
+
 <p>
 <img src="https://i.imgur.com/n75PPjD.png" height="80%" width="80%" alt="Virtual Machine DC-1"/>
 </p>
-  The Virtual Network (Vnet) that is now established should be noted since it will be required for our second virtual machine. Furthermore, make sure that DC-1's virtual Network Interface Card (NIC) Private IP address is set to static. To achieve this, navigate to the network settings of the DC-1, select networking, and then click the link next to network interface. Next, choose ipconfig1 from the IP Configurations menu. To ensure that DC-1's IP address won't change, simply select Assignment from Dynamic to Static. The 2nd virtual machine will represent the Client, labeled Client-1, and Windows 10 Pro will be the image type. Use the same Vnet and resource group as DC-1.
+Furthermore, make sure that DC-1's virtual Network Interface Card (NIC) Private IP address is set to static. To achieve this, navigate to the network settings of the DC-1, select networking, and then click the link next to network interface.
+
+<p>
+<img src="https://i.imgur.com/8idIkfJ.png" height="80%" width="80%" alt="NIC IP"/>
+</p>
+
+Next, choose ipconfig1 from the IP Configurations menu. To ensure that DC-1's IP address won't change, simply select Assignment from Dynamic to Static. The 2nd virtual machine will represent the Client, labeled Client-1, and Windows 10 Pro will be the image type. Use the same Vnet and resource group as DC-1.
 </p>
 <br />
 
