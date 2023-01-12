@@ -222,21 +222,46 @@ Click "User Accounts", choose "Select users who can remotely access this PC", se
 </p>
 
 <p>
-<img src="https://i.imgur.com/xsO0nTa.png" height="20%" width="20%" alt="Domain Users"/>
+<img src="https://i.imgur.com/xsO0nTa.png" height="40%" width="40%" alt="Domain Users"/>
 </p>
 <br />
 
 <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+Step 7: Log back into DC-1 as jane_admin, search for Powershell_ ise, right-click on it, and select "Open as administrator." 
+</p
+  
+<p>
+<img src="https://i.imgur.com/3GBhYwA.png" height="40%" width="40%" alt="Powershell_ise"/>
 </p>
-<br />
 
 <p>
-Step 7: Log back into DC-1 as jane_admin, search for Powershell_ ise, right-click on it, and select "Open as administrator." Choose "new script" from the menu in the upper left, then paste the script's content there. To run the script, click the green arrow button located at the top Centre. Come back to Active Directory Users and Computers after the users have been created. Click _EMPLOYEES after selecting mydomain.com. Here, you may see every account that has ever been made. With one of the newly generated accounts, you can now access Client-1.
+Choose "new script" from the menu in the upper left, then paste the script's content there. To run the script, click the green arrow button located at the top Centre.
+</p>
+ 
+<p>
+<img src="https://i.imgur.com/js2WD56.png" height="40%" width="40%" alt="New Script"/>
+</p>
 
-Using one of the newly created users, let's log in to Client-1 (in our instance "base.milu", password will be Password1)
+<p>
+<img src="https://i.imgur.com/DMn4a6r.png" height="40%" width="40%" alt="Run Script"/>
+</p>
+  
+<p>
+Come back to Active Directory Users and Computers after the users have been created. Click _EMPLOYEES after selecting mydomain.com. Here, you may see every account that has ever been made.
+</p>
+
+<p>
+<img src="https://i.imgur.com/Kq3VMMG.png" height="40%" width="40%" alt="Users"/>
+</p>
+  
+<p>
+Using one of the newly created users, let's log in to Client-1 (in our instance "dov.judu", password will be Password1)
+  
+<p>
+<img src="https://i.imgur.com/zJ2pE4c.png" height="40%" width="40%" alt="User login"/>
+</p>
+
+<p>
 Congratulations! You have set up on-premises Active Directory and generated users inside of Azure Virtual Machines.
-
 </p>
-<br />
 
