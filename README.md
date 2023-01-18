@@ -59,7 +59,7 @@ The 2nd virtual machine will represent the Client, labeled Client-1, and Windows
 </p>
 
 <p>
-<img src="https://i.imgur.com/GU4ySko.png" height="40%" width="40%" alt="Vnet"/>
+<img src="https://i.imgur.com/GU4ySko.png" height="80%" width="80%" alt="Vnet"/>
 </p>
 <br />
 
